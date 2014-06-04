@@ -5,11 +5,15 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.mygdx.game.Assets;
+import com.mygdx.game.PewGame;
 
 public class GameScreen extends PewScreen {
 	private SpriteBatch batch;
 	OrthographicCamera camera;
 	
+	public GameScreen(PewGame game) {
+	}
+
 	@Override
 	public void show() {
 		// TODO Auto-generated method stub
