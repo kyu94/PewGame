@@ -38,4 +38,10 @@ public class MenuScreen extends PewScreen {
 		System.out.println("!");
 		return false;
 	}
+	
+	@Override
+	public boolean keyUp(int keycode) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

@@ -47,5 +47,5 @@ public abstract class PewScreen implements Screen {
 	}
 	
 	public abstract boolean keyDown(int keycode);
-
+	public abstract boolean keyUp(int keycode);
 }
