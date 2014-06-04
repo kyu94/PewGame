@@ -32,4 +32,10 @@ public class MenuScreen extends PewScreen {
 		batch.begin();
 		batch.end();
 	}
+
+	@Override
+	public boolean keyDown(int keycode) {
+		System.out.println("!");
+		return false;
+	}
 }

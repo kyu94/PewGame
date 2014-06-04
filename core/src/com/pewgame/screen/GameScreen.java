@@ -66,4 +66,10 @@ public class GameScreen extends PewScreen {
 		// super.render(delta);
 
 	}
+
+	@Override
+	public boolean keyDown(int keycode) {
+		System.out.println(keycode);
+		return false;
+	}
 }

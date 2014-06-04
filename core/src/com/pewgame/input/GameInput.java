@@ -4,15 +4,14 @@ import com.badlogic.gdx.Screen;
 import com.pewgame.screen.PewScreen;
 
 public class GameInput extends InputController {
-	
+
 	PewScreen screen;
-	
-	public GameInput(Screen screen) {
-		this.screen = (PewScreen) screen;
-	}
-	
-	
+
 	public boolean keyDown(int keycode) {
 		return screen.keyDown(keycode);
+	}
+
+	public void setScreen(Screen screen) {
+		this.screen = (PewScreen) screen;
 	}
 }
