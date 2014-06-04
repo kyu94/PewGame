@@ -10,6 +10,10 @@ public class GameInput extends InputController {
 	public boolean keyDown(int keycode) {
 		return screen.keyDown(keycode);
 	}
+	
+	public boolean keyUp(int keycode) {
+		return screen.keyUp(keycode);
+	}
 
 	public void setScreen(Screen screen) {
 		this.screen = (PewScreen) screen;
