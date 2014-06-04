@@ -11,7 +11,7 @@ public class PewGame extends Game {
 	@Override
 	public void create() {
 		Assets.load();
-		Gdx.input.setInputProcessor(new GameInput());
+		Gdx.input.setInputProcessor(new GameInput(getScreen()));
 		setScreen(new MenuScreen(this));
 	}
 

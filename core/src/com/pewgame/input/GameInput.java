@@ -3,9 +3,17 @@ package com.pewgame.input;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.Screen;
 
 public class GameInput extends InputController {
-
+	
+	Screen screen;
+	
+	public GameInput(Screen screen) {
+		this.screen = screen;
+	}
+	
+	
 	public boolean keyDown(int keycode) {
 
 		switch (keycode) {
