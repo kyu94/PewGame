@@ -1,14 +1,14 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Game;
+import com.pewgame.screen.MenuScreen;
 
 
 public class PewGame extends Game {
 
 	@Override
 	public void create() {
-		// TODO Auto-generated method stub
-		
+		setScreen(new MenuScreen(this));
 	}
 
 }
