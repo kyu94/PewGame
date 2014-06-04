@@ -10,7 +10,7 @@ public class Assets {
 
 	public static void load() {
 		box = new TextureRegion(new Texture(Gdx.files.internal("box.png")));
-		box = new TextureRegion(new Texture(Gdx.files.internal("grass.png")));
+		grass = new TextureRegion(new Texture(Gdx.files.internal("grass.png")));
 	}
 	
 }
