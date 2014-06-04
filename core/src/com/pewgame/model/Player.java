@@ -28,6 +28,10 @@ public class Player {
 		
 		circ.setPosition(x, y);
 	}
+	
+	public float setVelX(int x) {
+		
+	}
 
 	public float getX() {
 		return x;
