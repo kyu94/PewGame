@@ -8,6 +8,7 @@ public class PewGame extends Game {
 
 	@Override
 	public void create() {
+		Assets.load();
 		setScreen(new MenuScreen(this));
 	}
 
