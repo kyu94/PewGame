@@ -2,7 +2,7 @@ package com.pewgame.screen;
 
 import com.badlogic.gdx.Screen;
 
-public class PewScreen implements Screen {
+public abstract class PewScreen implements Screen {
 
 	@Override
 	public void render(float delta) {
@@ -45,5 +45,7 @@ public class PewScreen implements Screen {
 		// TODO Auto-generated method stub
 
 	}
+	
+	public abstract boolean keyDown(int keycode);
 
 }
