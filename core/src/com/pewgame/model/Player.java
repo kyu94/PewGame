@@ -29,8 +29,8 @@ public class Player {
 		circ.setPosition(x, y);
 	}
 	
-	public float setVelX(int x) {
-		
+	public void setVelX(float velX) {
+		this.velX = velX;
 	}
 
 	public float getX() {

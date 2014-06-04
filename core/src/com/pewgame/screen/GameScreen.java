@@ -3,6 +3,7 @@ package com.pewgame.screen;
 import java.util.ArrayList;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -35,7 +36,7 @@ public class GameScreen extends PewScreen {
 			Tile block = new Tile(i, 0, 1, 1, Tile.TileType.TILE_GRASS);
 			ground.add(block);
 		}
-		
+
 		ball = new Player(8, 8, 2);
 	}
 
@@ -46,7 +47,7 @@ public class GameScreen extends PewScreen {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 		camera.update();
-		
+
 		ball.update(delta);
 
 		batch.setProjectionMatrix(camera.combined);
@@ -54,14 +55,17 @@ public class GameScreen extends PewScreen {
 		batch.begin();
 		for (Tile t : ground) {
 			if (t.getType() == TileType.TILE_GRASS) {
-				batch.draw(Assets.grass,t.getX(), t.getY(), t.getWidth(), t.getHeight());
+				batch.draw(Assets.grass, t.getX(), t.getY(), t.getWidth(),
+						t.getHeight());
 			} else if (t.getType() == TileType.TILE_BOX) {
-				batch.draw(Assets.box, t.getX(), t.getY(), t.getWidth(), t.getHeight());
+				batch.draw(Assets.box, t.getX(), t.getY(), t.getWidth(),
+						t.getHeight());
 			}
 		}
-		
-		batch.draw(Assets.box, ball.getX(), ball.getY(), ball.getRadius(), ball.getRadius());
-		
+
+		batch.draw(Assets.box, ball.getX(), ball.getY(), ball.getRadius(),
+				ball.getRadius());
+
 		batch.end();
 		// super.render(delta);
 
@@ -69,13 +73,20 @@ public class GameScreen extends PewScreen {
 
 	@Override
 	public boolean keyDown(int keycode) {
-		System.out.println(keycode);
+		switch (keycode) {
+		case Keys.D:
+			ball.setVelX(5);
+			return true;
+		case Keys.A:
+			ball.setVelX(-5);
+			return true;
+		}
 		return false;
 	}
-	
+
 	@Override
 	public boolean keyUp(int keycode) {
-		// TODO Auto-generated method stub
-		return false;
+		ball.setVelX(0);
+		return true;
 	}
 }
